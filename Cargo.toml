@@ -1,0 +1,5 @@
+[package]
+name = "list_sync"
+version = "0.1.0"
+authors = ["Mike Dilger <mike@optcomp.nz>"]
+license = "MIT"
