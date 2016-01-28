@@ -56,24 +56,6 @@ pub fn list_sync<A,B,C,M,I,U,D,E>(
     Ok(())
 }
 
-/// This function is for categorizing elements of a Vec into two Vecs based upon
-/// some predicate
-pub fn vec_categorize<T,F>(
-    input: &mut Vec<T>,
-    true_values: &mut Vec<T>,
-    false_values: &mut Vec<T>,
-    mut f: F)
-    where F: FnMut(&T) -> bool
-{
-    for elem in input.drain(..) {
-        if f(&elem) {
-            true_values.push(elem)
-        } else {
-            false_values.push(elem)
-        }
-    }
-}
-
 #[cfg(test)]
 mod tests {
     #[test]
